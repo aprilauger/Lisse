@@ -14,7 +14,6 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 		$hdr_title       = esc_attr( get_theme_mod( 'lisse_header_general_title_frgd', '#FFFFFF' ) );
 		$hdr_case        = esc_attr( get_theme_mod( 'lisse_header_general_case', 'capitalize' ) );
 		$color_primary   = esc_attr( get_theme_mod( 'lisse_color_scheme_primary', '#0088DB' ) );
-		$color_secondary = esc_attr( get_theme_mod( 'lisse_color_scheme_secondary', '#3698FF' ) );
 		$styles          = '';
 
 		if ( $top_enable ) {

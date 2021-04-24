@@ -1,7 +1,6 @@
 @import "bootstrap/bootstrap";
 @import "bootstrap/variables";
 @import "bootstrap-menu/bootstrap-menu";
-@import "search/search";
 
 /*!
  * Theme styles
@@ -20,8 +19,12 @@ h2,
 .h3,
 h4,
 .h4 {
-    letter-spacing: 0.05rem;
 	font-weight: $font-weight-semibold;
+    letter-spacing: 0.05rem;
+
+	a {
+		text-decoration: none;
+	}
 }
 
 h2, h3 {
@@ -51,6 +54,10 @@ a {
 	transition-duration: 300ms;
 	transition-timing-function: linear;
 	transition-delay: 0ms;
+}
+
+.sidebar a {
+	text-decoration: none;
 }
 
 // Prevents pre tags from causing the sidebar to drop below the content.
@@ -98,8 +105,29 @@ figure {
 	}
 }
 
+#title-block.search {
+	.tb-content {
+		padding-top: 3rem;
+		padding-bottom: 2rem;
+	}
+
+	form {
+		position: relative;
+	}
+}
+
 #title-block.hd-btm {
     margin-bottom: 3rem;
+}
+
+
+.title-block-form {
+	margin-bottom: 3.5rem;
+	max-width: 700px;
+}
+
+.title-block-form input {
+	max-width: none !important;
 }
 
 // Menu not fixed
@@ -182,8 +210,12 @@ figure {
 	h3 {
 		font-size: 1.5rem;
 	}
-}
 
+	.contact-image {
+		text-align: center;
+    	display: block;
+	}
+}
 
 // Forms
 .wpforms-confirmation-container-full {
@@ -296,6 +328,10 @@ img {
     color: #ffffff;
     text-align: center;
 
+	a {
+		text-decoration: none;
+	}
+
     h1 {
         color: #ffffff;
         font-size: 2rem;
@@ -304,7 +340,7 @@ img {
     .section-description {
         font-size: 1.5rem;
         line-height: 2rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.75rem;
     }
 
 	.button {
@@ -330,11 +366,11 @@ img {
 @media (min-width: 576px) {
     .jumbotron-container {
         h1 {
-			font-size: 2.75rem;
+			font-size: 3.75rem;
         }
 
         .section-description {
-            font-size: 1.7rem;
+            font-size: 2.25rem;
             line-height: 2.5rem;
 
         }
@@ -354,6 +390,10 @@ img {
 	padding: .2rem 1rem;
 	text-align: center;
     margin-bottom: 1rem;
+
+	a {
+		text-decoration: none;
+	}
 
 	&.btn-arrow {
 		border-radius: 2.5rem;
@@ -796,12 +836,6 @@ section .cta {
     left: 20px
 }
 
-// Subscription box
-.widget_mailpoet_form {
-    background: $gray-100;
-    padding: 1.5em;
-}
-
 // Two Column Layout
 .col-md-6.left.primary-color.bkg-image {
     background-position: center center;
@@ -852,7 +886,7 @@ section .cta {
 
 .col-md-6.left.img img,
 .col-md-6.right.img img {
-	max-height: 400px;
+	max-height: 500px;
 }
 
 .col-md-6.right img.animated,
@@ -872,7 +906,6 @@ section .cta {
     padding: 3rem 1.5rem;
     position: relative
 }
-
 
 @media (min-width: 576px) {
 
@@ -1063,17 +1096,6 @@ nav.post-nav-links {
 // Search
 .search-results .post-thumbnail img {
     display: none
-}
-
-.title-block-form {
-	margin: auto;
-	margin-bottom: 3.5rem;
-	max-width: 700px;
-	text-align: center;
-}
-
-.title-block-form input {
-	max-width: none !important;
 }
 
 input.search-field {
@@ -1271,17 +1293,6 @@ a.more-link {
     padding: 0
 }
 
-.screen-reader-text {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
 .content-area {
     position: relative;
 }
@@ -1343,3 +1354,46 @@ img.aligncenter {
 .commentlist .bypostauthor {
     background-color: #eee;
 }
+
+/* Accessibility */
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+	/* Many screen reader and browser combinations announce broken words as they would appear visually. */
+  }
+
+  .screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	right: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+  }
+
+  /* Do not show the outline on the skip link target. */
+  #content[tabindex="-1"]:focus {
+	outline: 0;
+  }

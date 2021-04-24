@@ -12,7 +12,7 @@ if ( ! function_exists( 'lisse_jumbotron' ) ) {
 	 */
 	function lisse_jumbotron() {
 		$title                = get_theme_mod( 'lisse_jumbotron_title', 'Lisse' );
-		$description          = get_theme_mod( 'lisse_jumbotron_description', 'Create an intuitive and responsive website easily with Lisse.' );
+		$description          = get_theme_mod( 'lisse_jumbotron_description', 'Turn your vision into reality.' );
 		$enable_first_button  = get_theme_mod( 'lisse_jumbotron_first_btn_enable', true );
 		$enable_second_button = get_theme_mod( 'lisse_jumbotron_second_btn_enable', true );
 		$first_button_title   = get_theme_mod( 'lisse_jumbotron_first_button_title', 'Learn more' );

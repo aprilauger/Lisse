@@ -55,7 +55,7 @@
 				'<span class="edit-link">',
 				'</span>',
 				0,
-				'btn btn-primary',
+				'btn btn-primary'
 			);
 			?>
 		</footer><!-- .entry-footer -->

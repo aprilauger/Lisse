@@ -259,7 +259,7 @@ $wp_customize->selective_refresh->add_partial(
 $wp_customize->add_setting(
 	'lisse_jumbotron_description',
 	array(
-		'default'           => __( 'The ultimate multi-purpose theme for WordPress.', 'lisse' ),
+		'default'           => __( 'Turn your vision into reality.', 'lisse' ),
 		'sanitize_callback' => 'wp_kses_post',
 	)
 );

@@ -65,7 +65,6 @@ if ( ! class_exists( 'Lisse_After_Setup_Theme' ) ) {
 			add_theme_support( 'post-thumbnails' );
 
 			// Add custom image sizes.
-			add_image_size( 'overlay-search', 100, 100, true );
 			add_image_size( 'lisse-post-thumbnail-large', 800, 350, true );
 			add_image_size( 'lisse-post-thumbnail-medium', 400, 250, true );
 			add_image_size( 'lisse-post-banner', 1500, 700, true );

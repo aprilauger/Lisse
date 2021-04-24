@@ -3,9 +3,9 @@ Contributors: aprilauger
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.0.0
+Stable tag: 1.1.1
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -20,8 +20,15 @@ Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. 
 
 == Changelog ==
 
-= 1.0 - April 15 2021 =
+= 1.0.0 - April 15 2021 =
 * Initial release
+
+= 1.0.1 - April 15 2021 =
+* Added additional styling for skip link and links.
+* Removed custom search modal.
+* Updated theme screenshot.
+* Removed rtl.css file.
+* Added image licensing to readme file.
 
 == Copyright ==
 
@@ -68,3 +75,21 @@ License: MIT License (https://opensource.org/licenses/MIT)
 Font Awesome:
 Source: https://fontawesome.com/
 License: SIL OFL 1.1 Code License: MIT License (http://scripts.sil.org/OFL)
+
+== Screenshots ==
+
+Image used in theme screenshot, Credit Neo2pak
+License: CC0 1.0 Universal (CC0 1.0)
+License URL: https://pxhere.com/en/license
+Source: https://pxhere.com/en/photo/1617869
+
+== Images ==
+
+Image on front page about section, Credit Q000024
+License: CC0 1.0 Universal (CC0 1.0)
+License URL: https://pxhere.com/en/license
+Source: https://pxhere.com/en/photo/1629588
+
+
+
+

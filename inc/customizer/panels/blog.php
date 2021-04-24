@@ -38,7 +38,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_blog_image',
 	array(
-		'default'           => get_template_directory_uri() . '/assets/img/lisse-wordpress-theme.jpg',
+		'default'           => get_template_directory_uri() . '/assets/img/lisse-wordpress-blog-header.jpg',
 		'sanitize_callback' => 'esc_url_raw',
 	)
 );

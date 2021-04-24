@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ eval("/*!\nWaypoints - 4.0.0\nCopyright © 2011-2015 Caleb Troughton\nLicensed u
 
 /***/ }),
 
-/***/ 4:
+/***/ 2:
 /*!**************************************!*\
   !*** multi ./assets/js/waypoints.js ***!
   \**************************************/

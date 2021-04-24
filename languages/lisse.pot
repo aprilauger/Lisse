@@ -145,7 +145,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Create an intuitive and responsive website easily with Lisse."
+"Turn your vision into reality."
 msgstr ""
 
 #. Author of the plugin/theme

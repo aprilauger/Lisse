@@ -138,8 +138,6 @@ if ( ! function_exists( 'lisse_top_bar' ) ) {
 									<?php endif; ?>
 								<?php endif; ?>
 
-								<a href="<?php echo esc_url( home_url( '/?s' ) ); ?>" id="search-trigger" class="search-trigger js-search-trigger"><i class="fas fa-search" aria-hidden="true"></i></a>
-
 								<?php
 								if ( ! empty( $cta_button ) ) :
 									?>
@@ -254,9 +252,12 @@ if ( ! function_exists( 'lisse_footer_col_one' ) ) {
 		<?php endif; ?>
 
 		<address>
-			<div class="contact-value-wrap">
-				<i class="fas fa-map-marker-alt"></i><?php echo esc_html( $col_one_address ); ?>
-			</div>
+			<?php if ( ! empty( $col_one_address ) ) : ?>
+				<div class="contact-value-wrap">
+					<i class="fas fa-map-marker-alt"></i><?php echo esc_html( $col_one_address ); ?>
+				</div>
+			<?php endif; ?>
+
 			<?php if ( ! empty( $phone ) ) : ?>
 				<div class="contact-value-wrap">
 					<a href="<?php echo esc_url( 'tel:' . $phone ); ?>" title="<?php echo esc_attr__( 'Call', 'lisse' ); ?>">
@@ -328,7 +329,7 @@ if ( ! function_exists( 'lisse_footer_copyright' ) ) {
 	 * Lisse Footer Copyright
 	 */
 	function lisse_footer_copyright() {
-		echo esc_html( get_theme_mod( 'lisse_footer_copyright', __( sprintf( '&copy; %s Lisse. All Rights Reserved.', gmdate( 'Y' ) ), 'lisse' ) ) );
+		echo esc_html( get_theme_mod( 'lisse_footer_copyright', __(  '&copy; 2021 Lisse. All Rights Reserved.', 'lisse' ) ) );
 	}
 }
 add_action( 'lisse_footer_copyright', 'lisse_footer_copyright' );

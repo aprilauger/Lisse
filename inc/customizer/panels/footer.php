@@ -497,7 +497,7 @@ $wp_customize->add_setting(
 	array(
 		'sanitize_callback' => 'lisse_sanitize_html',
 		// translators: copyright message.
-		'default'           => esc_html( __( sprintf( '&copy; %s Lisse. All Rights Reserved.', gmdate( 'Y' ) ), 'lisse' ) ),
+		'default'           => esc_html( __( '&copy; 2021 Lisse. All Rights Reserved.', 'lisse' ) ),
 	)
 );
 

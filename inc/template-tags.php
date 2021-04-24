@@ -94,7 +94,7 @@ if ( ! function_exists( 'lisse_entry_footer' ) ) :
 			'<span class="edit-link">',
 			'</span>',
 			0,
-			'btn btn-primary',
+			'btn btn-primary'
 		);
 	}
 endif;

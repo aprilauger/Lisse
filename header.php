@@ -28,7 +28,6 @@
 
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'lisse' ); ?></a>
-
 		<header id="header" class="bm-horizontal">
 			<div id="navbar-wrapper" class="bg-light start-header start-style <?php do_action( 'lisse_header_classes' ); ?>" itemscope itemtype="https://schema.org/WebSite">
 				<?php

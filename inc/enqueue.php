@@ -25,20 +25,6 @@ if ( ! function_exists( 'lisse_assets' ) ) {
 		wp_enqueue_script( 'lisse-bootstrap', JS_URL . 'bootstrap.js', array( 'jquery' ), '5.0', true );
 		wp_enqueue_script( 'lisse-scripts', JS_URL . 'scripts.js', array( 'jquery' ), '1.0.0', true );
 
-		// If the custom search is enabled in customizer, enqueue the script.
-		if ( true === (bool) get_theme_mod( 'lisse_header_top_enable', true ) ) {
-			wp_enqueue_script( 'lisse-search', JS_URL . 'search.js', array(), '1.0.0', true );
-		}
-
-		// Allows PHP variables to be passed to JavaScript.
-		wp_localize_script(
-			'lisse-scripts',
-			'lisseData',
-			array(
-				'root_url' => home_url(),
-			)
-		);
-
 		// Enqueue comment-reply scripts.
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );

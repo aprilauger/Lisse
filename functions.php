@@ -39,7 +39,6 @@ $includes = array(
 	'custom.php',                                // Custom functions.
 	'hooks/hooks.php',                           // Custom hooks.
 	'hooks/front-page.php',                      // Front page hooks.
-	'search-api.php',                            // Search API.
 );
 
 foreach ( $includes as $file ) {
