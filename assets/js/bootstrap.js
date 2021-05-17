@@ -104,7 +104,7 @@ eval("var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;function
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\plugins\\src\\assets\\js\\bootstrap.js */\"./assets/js/bootstrap.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/bootstrap.js?");
+eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\themes\\src\\assets\\js\\bootstrap.js */\"./assets/js/bootstrap.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/bootstrap.js?");
 
 /***/ })
 

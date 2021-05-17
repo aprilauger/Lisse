@@ -104,7 +104,7 @@ eval("/**\n * Scroll Animation\n *\n * Adds animation to the front page as the u
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\plugins\\src\\assets\\js\\scroll-animations.js */\"./assets/js/scroll-animations.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/scroll-animations.js?");
+eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\themes\\src\\assets\\js\\scroll-animations.js */\"./assets/js/scroll-animations.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/scroll-animations.js?");
 
 /***/ })
 

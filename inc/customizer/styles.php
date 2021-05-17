@@ -85,13 +85,13 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 			.col-md-6.left.primary-color.bkg-image::after {background-color: ' . $color_primary . '; border: ' . $color_primary . '}
 			.col-md-6.left .buttons a.button, .col-md-6.left .buttons a.button:visited {color: ' . $color_primary . '}
 			.bg-light {background-color: ' . $hdr_bkgd . ' !important;}
-			.bg-light.scroll-on {background-color: ' . $hdr_bkgd_scroll . ' !important;}
+			.bm-horizontal .start-header.scroll-on {background-color: ' . $hdr_bkgd_scroll . ' !important;}
 			.more-link:link, .more-link:visited, .more-link:active {color: ' . $color_primary . '; border: 1px solid ' . $color_primary . ' }
 
 			.btn-default {border: ' . $color_primary . '}
-			.btn-primary, button, button[type=submit] {background-color: ' . $color_primary . '; border: ' . $color_primary . ';color: #ffffff;}
+			.btn-primary, button, button[type=submit], .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {background-color: ' . $color_primary . '; border: ' . $color_primary . ';color: #ffffff;}
 			.btn-primary:link, .btn-primary:visited, button, .button:visited {color: #ffffff;}
-			.btn-primary:hover, button {background-color: ' . $color_hover . '; color: #ffffff;}
+			.btn-primary:hover, button, .woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {background-color: ' . $color_hover . '; color: #ffffff;}
 			.btn-primary:active, button:active {color: #ffffff;}
 			.btn-outline-primary:link {color: ' . $color_primary . '; border: 1px solid ' . $color_primary . ';}
 			.btn-outline-primary:visited {color: ' . $color_visited . '; background: none; border: 1px solid ' . $color_visited . ';}

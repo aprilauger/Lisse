@@ -140,7 +140,7 @@ function lisse_get_posts() {
 	$choices = array( '' => esc_html__( 'Select', 'lisse' ) );
 	$args    =
 		array(
-			'posts_per_page' => -1,
+			'posts_per_page' => 40,
 			'post_type'      => array( 'page', 'post' ),
 			'post_status'    => array( 'publish' ),
 			'orderby'        =>

@@ -59,7 +59,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_header_general_case',
 	array(
-		'default'           => 'uppercase',
+		'default'           => 'capitalize',
 		'sanitize_callback' => 'sanitize_text_field',
 	)
 );

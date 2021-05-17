@@ -175,7 +175,8 @@ if ( ! function_exists( 'lisse_about' ) ) {
 			<section id="about" class="frontpage-section">
 				<div class="<?php echo esc_attr( get_theme_mod( 'lisse_container_type', 'container' ) ); ?>">
 					<div class="row">
-						<div class="col-md-6 left">
+
+						<div class="<?php echo ( ! empty( $image ) ) ? 'col-md-6' : 'col-md-12'; ?> left">
 							<div class="separator">
 								<?php if ( ! empty( $title ) ) : ?>
 									<h2 class="about-title"><?php echo esc_html( $title ); ?></h2>
@@ -200,23 +201,24 @@ if ( ! function_exists( 'lisse_about' ) ) {
 									</div>
 								<?php endif; ?>
 							<?php endif; ?>
-						</div><!-- .col-md-6.left -->
-						<div class="col-md-6 right img">
-							<?php
-							if ( ! empty( $image ) ) {
-								$image_id  = attachment_url_to_postid( $image );
-								$image_url = wp_get_attachment_image_src( $image_id, 'frontpage-sections' );
+						</div>
 
-								if ( $image_url ) {
-									$img_src = $image_url[0];
-								} else {
-									$img_src = IMG_URL . 'about.jpg';
-								}
-								?>
+						<?php
+						if ( ! empty( $image ) ) {
+							$image_id  = attachment_url_to_postid( $image );
+							$image_url = wp_get_attachment_image_src( $image_id, 'frontpage-sections' );
 
+							if ( $image_url ) {
+								$img_src = $image_url[0];
+							} else {
+								$img_src = IMG_URL . 'about.jpg';
+							}
+							?>
+
+							<div class="col-md-6 right img">
 								<span class="about-image"><img class="animated animate-about" alt="<?php echo esc_html( $title ); ?>" src="<?php echo esc_url( $img_src ); ?>" /></span>
-							<?php } ?>
-						</div><!-- .col-md-6.right -->
+							</div>
+						<?php } ?>
 					</div><!-- .row -->
 				</div><!-- .container -->
 			</section><!-- #about -->
@@ -362,19 +364,19 @@ if ( ! function_exists( 'lisse_contact' ) ) {
 			<section id="contact" class="frontpage-section">
 				<div class="<?php echo esc_attr( get_theme_mod( 'lisse_container_type', 'container' ) ); ?>">
 					<div class="row">
-						<div class="col-md-6 left img">
-							<?php $image = esc_url( get_theme_mod( 'lisse_contact_image', get_template_directory_uri() . '/assets/img/contact.jpg' ) ); ?>
+						<?php $image = esc_url( get_theme_mod( 'lisse_contact_image', get_template_directory_uri() . '/assets/img/contact.jpg' ) ); ?>
 
 							<?php
 							if ( ! empty( $image ) ) :
 								$image_id  = attachment_url_to_postid( $image );
 								$image_url = wp_get_attachment_image_src( $image_id, 'frontpage-sections' );
 								?>
+							<div class="col-md-6 left img">
 								<span class="contact-image"><img class="animated animate-contact" src="<?php echo ( $image_url ) ? esc_url( $image_url[0] ) : esc_url( IMG_URL . 'contact.jpg' ); ?>" alt="<?php echo esc_html( $title ); ?>" /></span>
+							</div><!-- .col-md-6.left -->
 							<?php endif; ?>
-						</div><!-- .col-md-6.left -->
 
-						<div class="col-md-6 right">
+						<div class="<?php echo ( ! empty( $image ) ) ? 'col-md-6' : 'col-md-12'; ?> right">
 							<div class="separator">
 								<?php if ( ! empty( $title ) ) : ?>
 									<h2 class="contact-title"><?php echo esc_html( $title ); ?></h2>
@@ -410,7 +412,7 @@ if ( ! function_exists( 'lisse_contact' ) ) {
 									<a class="btn btn-primary btn-arrow secondary-color contact-email" href="mailto:<?php echo esc_attr( $email ); ?>" role="button" title="<?php echo esc_attr( $email_title ); ?>"><?php echo esc_html( $email_title ); ?></a>
 								<?php endif; ?>
 							<?php endif; ?>
-						</div><!-- .col-md-6.right -->
+						</div>
 					</div><!-- .row -->
 				</div><!-- .container -->
 			</section><!-- #contact.frontpage-section -->
