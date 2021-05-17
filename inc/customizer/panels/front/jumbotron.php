@@ -187,7 +187,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_jumbotron_overlay',
 	array(
-		'default'           => 'rgba(0,0,0,0.30)',
+		'default'           => 'rgba(0,0,0,0.50)',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );
@@ -467,7 +467,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_jumbotron_first_btn_bkgd',
 	array(
-		'default'           => '#0088DB',
+		'default'           => '#0277BB',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );
@@ -491,7 +491,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_jumbotron_first_btn_bkgd_hover',
 	array(
-		'default'           => '#3698FF',
+		'default'           => '#2e91d4',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );
@@ -515,7 +515,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_jumbotron_first_btn_bdr',
 	array(
-		'default'           => '#0088DB',
+		'default'           => '#0277BB',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );
@@ -674,7 +674,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_jumbotron_second_btn_bkgd_hover',
 	array(
-		'default'           => 'rgba(255,255,255,0.14)',
+		'default'           => 'rgba(255,255,255,0.1)',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );

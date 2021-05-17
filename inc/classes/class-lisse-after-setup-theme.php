@@ -118,6 +118,9 @@ if ( ! class_exists( 'Lisse_After_Setup_Theme' ) ) {
 				)
 			);
 
+			// Add support for woocommerce.
+			add_theme_support( 'woocommerce' );
+
 			// Add support for editor styles.
 			add_theme_support( 'editor-styles' );
 			add_editor_style( CSS_URL . 'editor.css' );

@@ -39,7 +39,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_header_general_sticky_enable',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -413,7 +413,7 @@ $top_header_colors[] = array(
 $top_header_colors[] = array(
 	'slug'     => 'hover',
 	'label'    => __( 'Hover', 'lisse' ),
-	'default'  => '#3698FF',
+	'default'  => '#2e91d4',
 	'priority' => 22,
 );
 
@@ -483,14 +483,14 @@ $primary_header_colors[] = array(
 $primary_header_colors[] = array(
 	'slug'     => 'hover',
 	'label'    => __( 'Hover Color', 'lisse' ),
-	'default'  => '#3698FF',
+	'default'  => '#0277BB',
 	'priority' => 5,
 );
 
 $primary_header_colors[] = array(
 	'slug'     => 'active',
 	'label'    => __( 'Active Color', 'lisse' ),
-	'default'  => '#0088DB',
+	'default'  => '#0277BB',
 	'priority' => 6,
 );
 
@@ -576,7 +576,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_header_title_bkgd',
 	array(
-		'default'           => '#0088DB',
+		'default'           => '#0277BB',
 		'sanitize_callback' => 'lisse_sanitize_color',
 	)
 );

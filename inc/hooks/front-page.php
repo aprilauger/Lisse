@@ -21,8 +21,7 @@ if ( ! function_exists( 'lisse_jumbotron' ) ) {
 		<div class="<?php echo esc_attr( get_theme_mod( 'lisse_container_type', 'container' ) ); ?>">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="animated">
-						<div class="jumbotron-container">
+					<div class="jumbotron-container">
 							<?php if ( ! empty( $title ) ) : ?>
 								<h1 class="title title animated fadeInDownBig slower"><?php echo esc_html( $title ); ?></h1>
 								<div class="divider">
@@ -46,8 +45,7 @@ if ( ! function_exists( 'lisse_jumbotron' ) ) {
 									<?php endif; ?>
 								</div><!-- .buttons -->
 							<?php endif; ?>
-						</div><!-- .jumbotron-container -->
-					</div><!-- .animated -->
+					</div><!-- .jumbotron-container -->
 				</div><!-- .col-md-12 -->
 			</div><!-- .row -->
 		</div><!-- .container -->
@@ -107,8 +105,8 @@ if ( ! function_exists( 'lisse_featured' ) ) {
 								$query->the_post();
 								?>
 								<div class="col-md-12 col-md-4 col-lg-4">
-									<article class="animated img-<?php echo esc_attr( $item ); ?>">
-										<div class="card excerpt animated fadeIn slow ">
+									<article class="animated animate-featured-<?php echo esc_attr( $item ); ?>">
+										<div class="card excerpt">
 											<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 												<div class="img-wrapper">
 													<?php
@@ -216,7 +214,7 @@ if ( ! function_exists( 'lisse_about' ) ) {
 								}
 								?>
 
-								<span class="about-image"><img class="animated fade-in-right" alt="<?php echo esc_html( $title ); ?>" src="<?php echo esc_url( $img_src ); ?>" /></span>
+								<span class="about-image"><img class="animated animate-about" alt="<?php echo esc_html( $title ); ?>" src="<?php echo esc_url( $img_src ); ?>" /></span>
 							<?php } ?>
 						</div><!-- .col-md-6.right -->
 					</div><!-- .row -->
@@ -259,7 +257,7 @@ if ( ! function_exists( 'lisse_cta' ) ) {
 						$image_url = wp_get_attachment_image_src( $image_id, 'frontpage-sections' );
 						?>
 
-						<div class="col-md-6 left primary-color bkg-image cta-left-wrapper animated" style="background-image: url(<?php echo ( $image_url ) ? esc_url( $image_url[0] ) : ''; // WPCS: XSS OK. ?>)">
+						<div class="col-md-6 left primary-color bkg-image cta-left-wrapper animated animate-cta-left" style="background-image: url(<?php echo ( $image_url ) ? esc_url( $image_url[0] ) : ''; // WPCS: XSS OK. ?>)">
 							<div class="separator">
 								<?php if ( ! empty( $title ) ) : ?>
 									<h2 class="cta-title white"><?php echo esc_html( $title ); ?></h2>
@@ -288,12 +286,12 @@ if ( ! function_exists( 'lisse_cta' ) ) {
 							<?php endif; ?>
 						</div><!-- .col-md-6.left -->
 
-						<div class="col-md-6 right">
+						<div class="col-md-6 right animated animate-cta-right">
 							<?php if ( ! empty( $entry_right ) ) : ?>
-								<p class="cta-right-wrapper animated"><?php echo esc_html( $entry_right ); ?></p>
+								<p class="cta-right-wrapper"><?php echo esc_html( $entry_right ); ?></p>
 							<?php endif; ?>
 
-							<div class="cta-right-wrapper animated">
+							<div class="cta-right-wrapper">
 								<div class="row">
 									<div class="col-md-6 step">
 										<?php if ( ! empty( $one ) ) : ?>
@@ -372,7 +370,7 @@ if ( ! function_exists( 'lisse_contact' ) ) {
 								$image_id  = attachment_url_to_postid( $image );
 								$image_url = wp_get_attachment_image_src( $image_id, 'frontpage-sections' );
 								?>
-								<span class="contact-image"><img class="animated fade-in-contact" src="<?php echo ( $image_url ) ? esc_url( $image_url[0] ) : esc_url( IMG_URL . 'contact.jpg' ); ?>" alt="<?php echo esc_html( $title ); ?>" /></span>
+								<span class="contact-image"><img class="animated animate-contact" src="<?php echo ( $image_url ) ? esc_url( $image_url[0] ) : esc_url( IMG_URL . 'contact.jpg' ); ?>" alt="<?php echo esc_html( $title ); ?>" /></span>
 							<?php endif; ?>
 						</div><!-- .col-md-6.left -->
 

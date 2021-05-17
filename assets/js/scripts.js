@@ -127,7 +127,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\themes\\lisse\\src\\assets\\js\\scripts.js */\"./assets/js/scripts.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/scripts.js?");
+eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\plugins\\src\\assets\\js\\scripts.js */\"./assets/js/scripts.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/scripts.js?");
 
 /***/ })
 

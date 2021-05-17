@@ -1,6 +1,6 @@
 <?php
 /**
- * Outputs classes into the body and styles into the head.
+ * Outputs styles into the head.
  *
  * @package Lisse
  */
@@ -13,14 +13,14 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 		$top_enable      = esc_attr( get_theme_mod( 'lisse_header_top_enable', true ) );
 		$hdr_title       = esc_attr( get_theme_mod( 'lisse_header_general_title_frgd', '#FFFFFF' ) );
 		$hdr_case        = esc_attr( get_theme_mod( 'lisse_header_general_case', 'capitalize' ) );
-		$color_primary   = esc_attr( get_theme_mod( 'lisse_color_scheme_primary', '#0088DB' ) );
+		$color_primary   = esc_attr( get_theme_mod( 'lisse_color_scheme_primary', '#0277BB' ) );
 		$styles          = '';
 
 		if ( $top_enable ) {
 			$top_bkgd  = esc_attr( get_theme_mod( 'lisse_header_top_bkgd', '#212121' ) );
 			$top_bdr   = esc_attr( get_theme_mod( 'lisse_header_top_bdr', '#FFFFFF' ) );
 			$top_link  = esc_attr( get_theme_mod( 'lisse_header_top_link', '#FFFFFF' ) );
-			$top_hover = esc_attr( get_theme_mod( 'lisse_header_top_hover', '#3698FF' ) );
+			$top_hover = esc_attr( get_theme_mod( 'lisse_header_top_hover', '#1783cc' ) );
 
 			if ( true === lisse_hex_check( $top_bkgd ) ) {
 				$top_bkgd = lisse_hex2rgba( $top_bkgd ); // Converts a hex value to RGBA.
@@ -40,25 +40,25 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 
 		$hdr_link        = esc_attr( get_theme_mod( 'lisse_header_primary_link', '#212121' ) );
 		$hdr_visited     = esc_attr( get_theme_mod( 'lisse_header_primary_visited', '#212121' ) );
-		$hdr_hover       = esc_attr( get_theme_mod( 'lisse_header_primary_hover', '#3698FF' ) );
-		$hdr_active      = esc_attr( get_theme_mod( 'lisse_header_primary_active', '#0088DB' ) );
+		$hdr_hover       = esc_attr( get_theme_mod( 'lisse_header_primary_hover', '#2e91d4' ) );
+		$hdr_active      = esc_attr( get_theme_mod( 'lisse_header_primary_active', '#0277BB' ) );
 		$hdr_bkgd        = esc_attr( get_theme_mod( 'lisse_header_primary_bkgd', '#FFFFFF' ) );
 		$hdr_bkgd_scroll = esc_attr( get_theme_mod( 'lisse_header_primary_bkgd_scroll', '#FFFFFF' ) );
 
-		$color_secondary = esc_attr( get_theme_mod( 'lisse_color_scheme_secondary', '#0088DB' ) );
+		$color_secondary = esc_attr( get_theme_mod( 'lisse_color_scheme_secondary', '#0277BB' ) );
 		$color_text      = esc_attr( get_theme_mod( 'lisse_color_scheme_text', '#333333' ) );
-		$color_link      = esc_attr( get_theme_mod( 'lisse_color_scheme_link', '#3698FF' ) );
-		$color_visited   = esc_attr( get_theme_mod( 'lisse_color_scheme_link_visited', '#0088DB' ) );
-		$color_hover     = esc_attr( get_theme_mod( 'lisse_color_scheme_link_hover', '#3698FF' ) );
-		$color_active    = esc_attr( get_theme_mod( 'lisse_color_scheme_link_active', '#0088DB' ) );
+		$color_link      = esc_attr( get_theme_mod( 'lisse_color_scheme_link', '#0277BB' ) );
+		$color_visited   = esc_attr( get_theme_mod( 'lisse_color_scheme_link_visited', '#0277BB' ) );
+		$color_hover     = esc_attr( get_theme_mod( 'lisse_color_scheme_link_hover', '#2e91d4' ) );
+		$color_active    = esc_attr( get_theme_mod( 'lisse_color_scheme_link_active', '#0277BB' ) );
 
 		$footer_bkgd      = esc_attr( get_theme_mod( 'lisse_footer_bkgd', '#212121' ) );
-		$footer_copy_bkgd = esc_attr( get_theme_mod( 'lisse_footer_copy_bkgd', '#181818' ) );
+		$footer_copy_bkgd = esc_attr( get_theme_mod( 'lisse_footer_copy_bkgd', '#212121' ) );
 		$footer_frgd      = esc_attr( get_theme_mod( 'lisse_footer_frgd', '#aaaaaa' ) );
 		$footer_header    = esc_attr( get_theme_mod( 'lisse_footer_header', '#ffffff' ) );
 		$footer_link      = esc_attr( get_theme_mod( 'lisse_footer_link', '#aaaaaa' ) );
 		$footer_visited   = esc_attr( get_theme_mod( 'lisse_footer_visited', '#aaaaaa' ) );
-		$footer_hover     = esc_attr( get_theme_mod( 'lisse_footer_hover', '#3698FF' ) );
+		$footer_hover     = esc_attr( get_theme_mod( 'lisse_footer_hover', '#2e91d4' ) );
 		$footer_bkgd_img  = esc_url( get_theme_mod( 'lisse_footer_general_image' ) );
 
 		if ( true === lisse_hex_check( $hdr_bkgd ) ) {
@@ -74,9 +74,10 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 			a.post-page-numbers, a.post-page-numbers:visited {color: ' . $color_text . ' !important}
 			h3.widget-title::after, .separator h2::after { background-color: ' . $color_primary . ';}
 
-			a:link, .btn.btn-light:hover::after, .card .card-body h2 a:hover, .card .card-body h3 a:hover {color: ' . $color_link . '}
+			a:link {color: ' . $color_link . '}
 			a:visited {color: ' . $color_visited . '}
-			a:hover, .excerpt h2 a:hover, .excerpt h4 a:hover, .entry-meta a:hover {color: ' . $color_hover . ';}
+			a:hover, .excerpt h2 a:hover, .excerpt h4 a:hover, .entry-meta a:hover,
+			.btn.btn-light:hover::after, .card .card-body h2 a:hover, .card .card-body h3 a:hover {color: ' . $color_hover . '}
 			.cat-links a:hover, .tags-links a:hover { color:#ffffff; background-color: ' . $color_hover . '}
 			a:active {color: ' . $color_active . '}
 
@@ -181,13 +182,13 @@ if ( ! function_exists( 'lisse_jumbotron_styles' ) ) {
 		$image                = esc_url( get_theme_mod( 'lisse_jumbotron_image' ) );
 		$enable_first_btn     = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_enable', true ) );
 		$first_btn_color      = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_frgd', '#FFFFFF' ) );
-		$first_btn_bkgd       = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bkgd', '#0088DB' ) );
-		$first_btn_bkg_hover  = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bkgd_hover', '#3698FF' ) );
-		$first_btn_bdr        = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bdr', '#0088DB' ) );
+		$first_btn_bkgd       = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bkgd', '#0277BB' ) );
+		$first_btn_bkg_hover  = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bkgd_hover', '#2e91d4' ) );
+		$first_btn_bdr        = esc_attr( get_theme_mod( 'lisse_jumbotron_first_btn_bdr', '#0277BB' ) );
 		$enable_second_btn    = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_enable', true ) );
 		$second_btn_color     = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_frgd', '#FFFFFF' ) );
 		$second_btn_bkgd      = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_bkgd', 'rgba(255,255,255,0)' ) );
-		$second_btn_bkg_hover = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_bkgd_hover', 'rgba(255,255,255,0.2)' ) );
+		$second_btn_bkg_hover = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_bkgd_hover', 'rgba(255,255,255,0.1)' ) );
 		$second_btn_bdr       = esc_attr( get_theme_mod( 'lisse_jumbotron_second_btn_bdr', '#FFFFFF' ) );
 		$title_frgd           = esc_attr( get_theme_mod( 'lisse_jumbotron_title_frgd', '#FFFFFF' ) );
 		$description_frgd     = esc_attr( get_theme_mod( 'lisse_jumbotron_description_frgd', '#FFFFFF' ) );
@@ -263,7 +264,7 @@ if ( ! function_exists( 'lisse_styles' ) ) {
  * Outputs title block on posts and pages.
  */
 function lisse_title_block() {
-	$hdr_title_bkgd       = esc_attr( get_theme_mod( 'lisse_header_title_bkgd', '#0088DB' ) );
+	$hdr_title_bkgd       = esc_attr( get_theme_mod( 'lisse_header_title_bkgd', '#0277BB' ) );
 	$hdr_title_alignment  = esc_attr( get_theme_mod( 'lisse_header_title_content_alignment', 'left' ) );
 	$blog_enable_parallax = get_theme_mod( 'lisse_blog_enable_parallax', true );
 	$blog_parallax        = ( $blog_enable_parallax ) ? 'background-attachment:fixed' : '';

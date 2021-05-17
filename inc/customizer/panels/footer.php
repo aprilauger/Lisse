@@ -113,7 +113,7 @@ $footer_colors[] = array(
 $footer_colors[] = array(
 	'slug'     => 'copy_bkgd',
 	'label'    => __( 'Copyright Background', 'lisse' ),
-	'default'  => '#181818',
+	'default'  => '#212121',
 	'priority' => 6,
 );
 
@@ -141,7 +141,7 @@ $footer_colors[] = array(
 $footer_colors[] = array(
 	'slug'     => 'hover',
 	'label'    => __( 'Hover Color', 'lisse' ),
-	'default'  => '#3698FF',
+	'default'  => '#2e91d4',
 	'priority' => 10,
 );
 

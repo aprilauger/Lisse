@@ -3,7 +3,7 @@ Contributors: aprilauger
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.1
+Stable tag: 1.1.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -23,12 +23,21 @@ Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. 
 = 1.0.0 - April 15 2021 =
 * Initial release
 
-= 1.0.1 - April 15 2021 =
+= 1.1.1 - April 15 2021 =
 * Added additional styling for skip link and links.
 * Removed custom search modal.
 * Updated theme screenshot.
 * Removed rtl.css file.
 * Added image licensing to readme file.
+
+= 1.1.2 - May 14 2021 =
+* Added keyboard navigation for dropdown menu.
+* Added additional styling to fix sticky menu and title.
+* Removed style preventing link headings from being underlined.
+* Updated default values for customizer settings.
+
+= 1.1.3 - May 17 2021 =
+* Added support for WooCommerce.
 
 == Copyright ==
 

@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,14 +97,14 @@ eval("/*!\nWaypoints - 4.0.0\nCopyright © 2011-2015 Caleb Troughton\nLicensed u
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!**************************************!*\
   !*** multi ./assets/js/waypoints.js ***!
   \**************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\themes\\lisse\\src\\assets\\js\\waypoints.js */\"./assets/js/waypoints.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/waypoints.js?");
+eval("module.exports = __webpack_require__(/*! C:\\xampp\\htdocs\\development\\wp-content\\plugins\\src\\assets\\js\\waypoints.js */\"./assets/js/waypoints.js\");\n\n\n//# sourceURL=webpack:///multi_./assets/js/waypoints.js?");
 
 /***/ })
 

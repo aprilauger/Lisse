@@ -11,13 +11,16 @@ if ( ! function_exists( 'lisse_body_classes' ) ) {
 	 * Adds custom classes to the array of body classes.
 	 */
 	function lisse_body_classes() {
-		if ( true === (bool) get_theme_mod( 'lisse_header_general_sticky_enable', true ) ) {
+		if ( true === (bool) get_theme_mod( 'lisse_header_general_sticky_enable', false ) ) {
 			if ( true === (bool) get_theme_mod( 'lisse_header_top_enable', true ) ) {
-				body_class( array( 'menu-100', 'sticky-menu' ) );
+				body_class( array( 'menu-110', 'sticky-menu' ) );
 			} else {
-				body_class( array( 'menu-70', 'sticky-menu' ) );
+				body_class( array( 'menu-75', 'sticky-menu' ) );
 			}
+		} else {
+			body_class();
 		}
+
 	}
 }
 add_action( 'lisse_body_classes', 'lisse_body_classes' );
@@ -29,7 +32,7 @@ if ( ! function_exists( 'lisse_header_classes' ) ) {
 	 */
 	function lisse_header_classes() {
 		$enable_parallax      = get_theme_mod( 'lisse_jumbotron_enable_parallax', true );
-		$sticky_header_enable = get_theme_mod( 'lisse_header_general_sticky_enable', true );
+		$sticky_header_enable = get_theme_mod( 'lisse_header_general_sticky_enable', false );
 
 		if ( is_front_page() ) {
 			$header_class = 'header-front-page';
@@ -46,9 +49,10 @@ if ( ! function_exists( 'lisse_header_classes' ) ) {
 		}
 
 		global $post;
-		if ( $post ) {
-			if ( ! has_post_thumbnail( $post->ID ) ) {
-				$header_class .= ' no-img';
+
+		if ( $post  ) {
+			if ( ! has_post_thumbnail( $post->ID ) && is_front_page() ) {
+				$header_class .= 'no-img';
 			}
 		}
 
@@ -164,9 +168,8 @@ if ( ! function_exists( 'lisse_navigation' ) ) {
 	 */
 	function lisse_navigation() {
 		?>
-		<nav id="site-navigation" class="navbar navbar-expand-md navbar-light">
+		<nav id="site-navigation" class="navbar navbar-expand-md navbar-light" aria-label="<?php esc_attr_e( 'Primary menu', 'lisse' ); ?>">
 			<div class="<?php echo esc_attr( get_theme_mod( 'lisse_container_type', 'container' ) ); ?>">
-
 				<?php do_action( 'lisse_site_branding' ); ?>
 
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -204,9 +207,7 @@ if ( ! function_exists( 'lisse_site_branding' ) ) {
 		?>
 		<div class="custom-logo">
 			<?php if ( has_custom_logo() ) : ?>
-				<div class="site-logo">
-					<?php the_custom_logo(); ?>
-				</div>
+				<div class="site-logo"><?php the_custom_logo(); ?></div>
 			<?php else : ?>
 				<?php
 				$title = get_bloginfo( 'name', 'display' );
