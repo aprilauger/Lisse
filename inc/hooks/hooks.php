@@ -68,14 +68,14 @@ if ( ! function_exists( 'lisse_top_bar' ) ) {
 	 */
 	function lisse_top_bar() {
 
-		$enable_top_bar = get_theme_mod( 'lisse_header_top_enable', true );
+		$enable_top_bar = get_theme_mod( 'lisse_header_top_enable', false );
 
 		if ( true === (bool) $enable_top_bar ) {
 			$email          = get_theme_mod( 'lisse_header_top_email', 'info@yourwebsite.com' );
 			$phone          = get_theme_mod( 'lisse_header_top_phone', '916-222-3333' );
 			$cta_button     = get_theme_mod( 'lisse_header_top_cta_btn', 'Sign Up' );
 			$cta_button_url = get_theme_mod( 'lisse_header_top_cta_btn_url', '#' );
-			$social_icons   = get_theme_mod( 'lisse_header_top_social_icons_enable', 'true' );
+			$social_icons   = get_theme_mod( 'lisse_header_top_social_icons_enable', 'false' );
 			$icons          = '';
 
 			if ( true === (bool) $social_icons ) {
@@ -249,7 +249,7 @@ if ( ! function_exists( 'lisse_footer_col_one' ) ) {
 			<div class="col-one">
 				<div class="h4"><?php echo esc_html( $col_one_title ); ?></div>
 			</div><!-- .col-one -->
-			<div><?php echo wp_kses_post( $col_one_entry ); ?></div>
+			<div><?php echo esc_html( $col_one_entry ); ?></div>
 		<?php endif; ?>
 
 		<address>
@@ -341,7 +341,7 @@ if ( ! function_exists( 'lisse_footer_social_icons' ) ) {
 	 */
 	function lisse_footer_social_icons() {
 
-		$enable_social = get_theme_mod( 'lisse_footer_social_icons_enable', true );
+		$enable_social = get_theme_mod( 'lisse_footer_social_icons_enable', false );
 
 		if ( true === (bool) $enable_social ) {
 			$facebook  = get_theme_mod( 'lisse_header_top_facebook', '#' );

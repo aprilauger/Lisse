@@ -92,7 +92,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_header_top_enable',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -159,7 +159,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_header_top_social_icons_enable',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );

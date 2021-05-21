@@ -260,14 +260,13 @@ $wp_customize->add_setting(
 	'lisse_jumbotron_description',
 	array(
 		'default'           => __( 'Turn your vision into reality.', 'lisse' ),
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 
 $wp_customize->add_control(
 	'lisse_jumbotron_description',
 	array(
-		'type'            => 'textarea',
 		'label'           => __( 'Description', 'lisse' ),
 		'priority'        => 11,
 		'section'         => 'lisse_jumbotron_section',

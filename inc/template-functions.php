@@ -22,6 +22,11 @@ add_action( 'wp_head', 'lisse_pingback_header' );
  * @return int        Modified excerpt length.
  */
 function lisse_slug_excerpt_length( $length ) {
+
+	if ( is_admin() ) {
+		return $length;
+	}
+
 	return 25;
 }
 add_filter( 'excerpt_length', 'lisse_slug_excerpt_length', 100 );
@@ -33,6 +38,11 @@ add_filter( 'excerpt_length', 'lisse_slug_excerpt_length', 100 );
  * @return string modified "read more" excerpt string.
  */
 function lisse_excerpt_more( $more ) {
+
+	if ( is_admin() ) {
+		return $more;
+	}
+
 	return '<div class="btn btn-light btn-arrow"><a href="' . esc_url( get_the_permalink() ) . '" rel="nofollow" title="' . __( 'Read More', 'lisse' )  . '">' . __( 'Read More', 'lisse' ) . '</a></div>';
 }
 add_filter( 'excerpt_more', 'lisse_excerpt_more' );

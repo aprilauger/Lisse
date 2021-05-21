@@ -61,7 +61,7 @@ if ( ! function_exists( 'lisse_featured' ) ) {
 	 */
 	function lisse_featured() {
 
-		if ( (bool) get_theme_mod( 'lisse_featured_show', true ) === true ) {
+		if ( (bool) get_theme_mod( 'lisse_featured_show', false ) === true ) {
 			$featured_title    = get_theme_mod( 'lisse_featured_title', 'Featured' );
 			$featured_subtitle = get_theme_mod( 'lisse_featured_subtitle', 'Lorem ipsum dolor sit amet' );
 			$featured_num      = 6;

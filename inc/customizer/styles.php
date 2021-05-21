@@ -10,7 +10,7 @@ if ( ! function_exists( 'lisse_head_styles' ) ) {
 	 * Outputs inline head styles.
 	 */
 	function lisse_head_styles() {
-		$top_enable      = esc_attr( get_theme_mod( 'lisse_header_top_enable', true ) );
+		$top_enable      = esc_attr( get_theme_mod( 'lisse_header_top_enable', false ) );
 		$hdr_title       = esc_attr( get_theme_mod( 'lisse_header_general_title_frgd', '#FFFFFF' ) );
 		$hdr_case        = esc_attr( get_theme_mod( 'lisse_header_general_case', 'capitalize' ) );
 		$color_primary   = esc_attr( get_theme_mod( 'lisse_color_scheme_primary', '#0277BB' ) );

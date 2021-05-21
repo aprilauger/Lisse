@@ -20,7 +20,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_featured_show',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );

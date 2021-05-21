@@ -3,7 +3,7 @@ Contributors: aprilauger
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.3
+Stable tag: 1.1.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,8 +36,19 @@ Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. 
 * Removed style preventing link headings from being underlined.
 * Updated default values for customizer settings.
 
-= 1.1.3 - May 17 2021 =
+= 1.1.3 - May 14 2021 =
+* Removed SASS file.
+* Updated jumbotron.php file.
+
+= 1.1.4 - May 17 2021 =
 * Added support for WooCommerce.
+* Updated front-page.php file.
+
+= 1.1.5 - May 21 2021 =
+* Set default settings for social media icons and latest posts section to disabled.
+* Changed header, jumbotron, and footer textarea fields to text fields.
+* Applied excerpt_length and excerpt_more filters to front end only.
+* Added alpha color picker license to readme file.
 
 == Copyright ==
 
@@ -81,6 +92,11 @@ Author: Copyright (c) 2011-2014 Caleb Troughton.
 Source: https://github.com/imakewebthings/waypoints
 License: MIT License (https://opensource.org/licenses/MIT)
 
+Alpha Color Picker Customizer Control
+Author: Copyright (c) 2016 cristian-ungureanu.
+Source: https://github.com/Codeinwp/customizer-controls
+License: MIT License (https://opensource.org/licenses/MIT)
+
 Font Awesome:
 Source: https://fontawesome.com/
 License: SIL OFL 1.1 Code License: MIT License (http://scripts.sil.org/OFL)
@@ -98,6 +114,9 @@ Image on front page about section, Credit Q000024
 License: CC0 1.0 Universal (CC0 1.0)
 License URL: https://pxhere.com/en/license
 Source: https://pxhere.com/en/photo/1629588
+
+Image on front page contact section, Credit April Auger
+License: GNU GPL, Version 3, https://www.gnu.org/licenses/gpl-3.0.html
 
 
 

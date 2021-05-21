@@ -50,7 +50,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_footer_social_icons_enable',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -300,14 +300,13 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_footer_col_one_entry',
 	array(
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 
 $wp_customize->add_control(
 	'lisse_footer_col_one_entry',
 	array(
-		'type'            => 'textarea',
 		'label'           => __( 'Description', 'lisse' ),
 		'priority'        => 4,
 		'section'         => 'lisse_footer_col_one_section',
@@ -393,14 +392,13 @@ $wp_customize->add_setting(
 	'lisse_footer_col_two_entry',
 	array(
 		'default'           => '<ul><li><a href="/#" title="About">About</a></li><li><a href="/#" title="Terms & Conditions">Terms & Conditions</a></li><li><a href="/#" title="Privacy Policy">Privacy Policy</a></li></ul>',
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 
 $wp_customize->add_control(
 	'lisse_footer_col_two_entry',
 	array(
-		'type'            => 'textarea',
 		'label'           => __( 'Description', 'lisse' ),
 		'priority'        => 2,
 		'section'         => 'lisse_footer_col_two_section',

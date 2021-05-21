@@ -112,14 +112,13 @@ $wp_customize->add_setting(
 	'lisse_cta_entry_left',
 	array(
 		'default'           => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'lisse' ),
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 
 $wp_customize->add_control(
 	'lisse_cta_entry_left',
 	array(
-		'type'            => 'textarea',
 		'label'           => __( 'Description', 'lisse' ),
 		'priority'        => 5,
 		'section'         => 'lisse_cta_section',
@@ -252,14 +251,13 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_cta_entry_right',
 	array(
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'lisse_about_entry',
 	)
 );
 
 $wp_customize->add_control(
 	'lisse_cta_entry_right',
 	array(
-		'type'            => 'textarea',
 		'label'           => __( 'Description', 'lisse' ),
 		'priority'        => 11,
 		'section'         => 'lisse_cta_section',
@@ -292,7 +290,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'lisse_cta_option_one',
 	array(
-		'default'           => __( 'Learn More', 'lisse' ),
+		'default'           => __( 'Responsive', 'lisse' ),
 		'sanitize_callback' => 'sanitize_text_field',
 	)
 );

@@ -82,7 +82,7 @@ $wp_customize->add_setting(
 	'lisse_general_404_content',
 	array(
 		'default'           => __( 'Sorry, the page you were looking for could not be found.', 'lisse' ),
-		'sanitize_callback' => 'wp_kses_post',
+		'sanitize_callback' => 'sanitize_text_field',
 	)
 );
 
@@ -90,10 +90,9 @@ $wp_customize->add_control(
 	'lisse_general_404_content',
 	array(
 		'label'       => __( '404 Page', 'lisse' ),
-		'description' => __( 'Custom textarea', 'lisse' ),
+		'description' => __( 'Custom text', 'lisse' ),
 		'section'     => 'lisse_general_404_page',
 		'priority'    => 2,
-		'type'        => 'textarea',
 		'settings'    => 'lisse_general_404_content',
 	)
 );
