@@ -7856,6 +7856,10 @@ figure {
   color: #212121;
   text-align: center; }
 
+#front-page {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem; }
+
 .frontpage-section h2, .frontpage-section .h2, .frontpage-section h3, .frontpage-section .h3 {
   margin-top: 0; }
 

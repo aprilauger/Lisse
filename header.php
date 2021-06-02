@@ -38,7 +38,7 @@
 
 			<?php
 			// If enabled, show the jumbotron on the front page.
-			if ( (bool) get_theme_mod( 'lisse_jumbotron_enable', true ) === true && is_front_page() ) {
+			if ( (bool) get_theme_mod( 'lisse_jumbotron_enable', false ) === true && is_front_page() ) {
 				?>
 				<div class="jumbotron">
 					<?php get_template_part( 'template-parts/frontpage/frontpage-jumbotron-image' ); ?>

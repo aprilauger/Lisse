@@ -9,7 +9,7 @@
  * @package Lisse
  */
 
-$footer_enable       = get_theme_mod( 'lisse_footer_enable', true );
+$footer_enable       = get_theme_mod( 'lisse_footer_enable', false );
 $show_copyright      = get_theme_mod( 'lisse_footer_copyright_show', true );
 $enable_social_icons = get_theme_mod( 'lisse_footer_social_icons_enable', true );
 ?>

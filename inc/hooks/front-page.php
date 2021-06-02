@@ -164,7 +164,7 @@ if ( ! function_exists( 'lisse_about' ) ) {
 	 * Lisse about section.
 	 */
 	function lisse_about() {
-		if ( (bool) get_theme_mod( 'lisse_about_show', true ) === true ) {
+		if ( (bool) get_theme_mod( 'lisse_about_show', false ) === true ) {
 			$title      = get_theme_mod( 'lisse_about_title', 'About' );
 			$subtitle   = get_theme_mod( 'lisse_about_subtitle', 'Lorem ipsum dolor sit amet' );
 			$entry      = get_theme_mod( 'lisse_about_entry', 'Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
@@ -233,7 +233,7 @@ if ( ! function_exists( 'lisse_cta' ) ) {
 	 * Lisse call to action section.
 	 */
 	function lisse_cta() {
-		$cta_show = get_theme_mod( 'lisse_cta_show', true );
+		$cta_show = get_theme_mod( 'lisse_cta_show', false );
 
 		if ( true === (bool) $cta_show ) {
 			$btn_enable  = get_theme_mod( 'lisse_cta_button_enable', true );
@@ -353,7 +353,7 @@ if ( ! function_exists( 'lisse_contact' ) ) {
 	 * Lisse contact section.
 	 */
 	function lisse_contact() {
-		if ( true === (bool) get_theme_mod( 'lisse_contact_show', true ) ) {
+		if ( true === (bool) get_theme_mod( 'lisse_contact_show', false ) ) {
 			$title        = get_theme_mod( 'lisse_contact_title', 'Contact' );
 			$subtitle     = get_theme_mod( 'lisse_contact_subtitle', 'We would love to hear from you!' );
 			$entry        = get_theme_mod( 'lisse_contact_entry', 'Lorem ipsum dolor sit ametsed tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' );
@@ -428,10 +428,10 @@ if ( ! function_exists( 'lisse_front_page_sections' ) ) {
 	 * Lisse front page sections
 	 */
 	function lisse_front_page_sections() {
-		$featured_show = get_theme_mod( 'lisse_featured_show', true );
-		$about_show    = get_theme_mod( 'lisse_about_show', true );
-		$cta_show      = get_theme_mod( 'lisse_cta_show', true );
-		$contact_show  = get_theme_mod( 'lisse_contact_show', true );
+		$featured_show = get_theme_mod( 'lisse_featured_show', false );
+		$about_show    = get_theme_mod( 'lisse_about_show', false );
+		$cta_show      = get_theme_mod( 'lisse_cta_show', false );
+		$contact_show  = get_theme_mod( 'lisse_contact_show', false );
 
 		if ( true === (bool) $featured_show ) {
 			get_template_part( 'template-parts/frontpage/frontpage', 'featured' );

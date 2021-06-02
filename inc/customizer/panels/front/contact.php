@@ -20,7 +20,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_contact_show',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -349,7 +349,7 @@ if ( ! function_exists( 'lisse_contact_is_enabled' ) ) {
 	 * @return bool Whether the contact section is enabled or not.
 	 */
 	function lisse_contact_is_enabled() {
-		$contact_enabled = get_theme_mod( 'lisse_contact_show', true );
+		$contact_enabled = get_theme_mod( 'lisse_contact_show', false );
 
 		if ( $contact_enabled ) {
 			return true;
@@ -365,7 +365,7 @@ if ( ! function_exists( 'lisse_contact_phone_button_is_enabled' ) ) {
 	 * @return bool Whether the phone button is enabled or not.
 	 */
 	function lisse_contact_phone_button_is_enabled() {
-		$contact_enabled              = get_theme_mod( 'lisse_contact_show', true );
+		$contact_enabled              = get_theme_mod( 'lisse_contact_show', false );
 		$contact_phone_button_enabled = get_theme_mod( 'lisse_contact_phone_enable', true );
 
 		if ( $contact_enabled && $contact_phone_button_enabled ) {
@@ -382,7 +382,7 @@ if ( ! function_exists( 'lisse_contact_email_button_is_enabled' ) ) {
 	 * @return bool Whether the email button is enabled or not.
 	 */
 	function lisse_contact_email_button_is_enabled() {
-		$contact_enabled              = get_theme_mod( 'lisse_contact_show', true );
+		$contact_enabled              = get_theme_mod( 'lisse_contact_show', false );
 		$contact_email_button_enabled = get_theme_mod( 'lisse_contact_email_enable', true );
 
 		if ( $contact_enabled && $contact_email_button_enabled ) {

@@ -20,7 +20,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_cta_show',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -570,7 +570,7 @@ if ( ! function_exists( 'lisse_cta_is_enabled' ) ) {
 	 * @return bool Whether the call to action section is enabled or not.
 	 */
 	function lisse_cta_is_enabled() {
-		$cta_enabled = get_theme_mod( 'lisse_cta_show', true );
+		$cta_enabled = get_theme_mod( 'lisse_cta_show', false );
 		if ( $cta_enabled ) {
 			return true;
 		}
@@ -585,7 +585,7 @@ if ( ! function_exists( 'lisse_cta_button_is_enabled' ) ) {
 	 * @return bool Whether the call to action button is enabled or not.
 	 */
 	function lisse_cta_button_is_enabled() {
-		$cta_enabled        = get_theme_mod( 'lisse_cta_show', true );
+		$cta_enabled        = get_theme_mod( 'lisse_cta_show', false );
 		$cta_button_enabled = get_theme_mod( 'lisse_cta_button_enable', true );
 
 		if ( $cta_enabled && $cta_button_enabled ) {

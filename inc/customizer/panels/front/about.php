@@ -20,7 +20,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_about_show',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );
@@ -276,7 +276,7 @@ if ( ! function_exists( 'lisse_about_button_is_enabled' ) ) {
 	 * @return bool Whether the about button is enabled or not.
 	 */
 	function lisse_about_button_is_enabled() {
-		$about_enabled        = get_theme_mod( 'lisse_about_show', true );
+		$about_enabled        = get_theme_mod( 'lisse_about_show', false );
 		$about_button_enabled = get_theme_mod( 'lisse_about_button_enable', true );
 
 		if ( $about_enabled && $about_button_enabled ) {

@@ -30,7 +30,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'lisse_footer_enable',
 	array(
-		'default'           => true,
+		'default'           => false,
 		'sanitize_callback' => 'lisse_sanitize_checkbox',
 	)
 );

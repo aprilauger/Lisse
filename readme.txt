@@ -3,7 +3,7 @@ Contributors: aprilauger
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.5
+Stable tag: 1.1.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -49,6 +49,9 @@ Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. 
 * Changed header, jumbotron, and footer textarea fields to text fields.
 * Applied excerpt_length and excerpt_more filters to front end only.
 * Added alpha color picker license to readme file.
+
+= 1.1.6 - May 25 2021 =
+* Set default settings for jumbotron, about, contact, call to action, and footer sections to disabled.
 
 == Copyright ==
 
