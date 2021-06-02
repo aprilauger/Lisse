@@ -3,13 +3,13 @@ Contributors: aprilauger
 Requires at least: 5.3
 Tested up to: 5.7
 Requires PHP: 5.6
-Stable tag: 1.1.6
+Stable tag: 1.1.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. Lisse is easy to install, customize, and use for any business type.
+Lisse is a professional and SEO-friendly multipurpose theme built with the Bootstrap 5 framework to create beautiful responsive websites in minutes. Lisse is easy to install, customize, and use for any business type. Attract and engage your visitors by adding animation and customizing the front page jumbotron, featured posts, about, call to action, and contact sections, all within the WordPress Theme Customizer. Customize your website header, layout, color scheme, blog, footer, and more!
 
 == Installation ==
 
@@ -52,6 +52,9 @@ Lisse is a multi-purpose responsive theme built with the Bootstrap 5 framework. 
 
 = 1.1.6 - May 25 2021 =
 * Set default settings for jumbotron, about, contact, call to action, and footer sections to disabled.
+
+= 1.1.7 - June 2 2021 =
+* Updated the theme description and tags in style.css.
 
 == Copyright ==
 
